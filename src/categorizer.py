@@ -11,5 +11,6 @@ def add_category(transaction):
         for key, value in categories.items():
             if description in value:
                 x["category"] = key
+                break
             else:
                 x["category"] = "Other"
