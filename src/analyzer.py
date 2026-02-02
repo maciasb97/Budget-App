@@ -36,7 +36,7 @@ def calculate(transactions):
 
     
     #Calculate net total
-    total_transactions["totals"]["Earnings Before Tax"] = total_transactions["revenue"]["Total Income"] - total_transactions["expenses"]["Total Expenses"]
+    total_transactions["totals"]["Earnings Before Tax"] = total_transactions["totals"]["Total Income"] - total_transactions["totals"]["Total Expenses"]
     total_transactions["totals"]["Net Income"] = (total_transactions["totals"]["Earnings Before Tax"] - (total_transactions["totals"]["Earnings Before Tax"] * 0.0425)) #Assuming current Michigan tax rate of 4.25%
     
     return total_transactions
