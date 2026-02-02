@@ -3,12 +3,12 @@ def add_category(transaction):
                   "Rent":["rent"], 
                   "Entertainment":["netflix", "hulu", "disney", "amazon prime"],
                   "Utilities":["electricity", "gas", "water", "bill"],
-                  "Income":["paycheck", "salary"], 
-                  "Other":["miscellaneous", "other", "misc"]}
+                  "Income":["paycheck", "salary"]}
     
     for x in transaction:
         description = x["description"].lower()
         for key, value_list in categories.items():
+            #Check if current word in value_list matches the description and assign category
             if any(word_in_values in description for word_in_values in value_list):
                 x["category"] = key
                 break
