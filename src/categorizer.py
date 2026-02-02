@@ -3,7 +3,9 @@ def add_category(transaction):
                   "Rent":["rent"], 
                   "Entertainment":["netflix", "hulu", "disney", "amazon prime"],
                   "Utilities":["electricity", "gas", "water", "bill"],
-                  "Income":["paycheck", "salary"]}
+                  "Wages":["paycheck", "salary"],
+                  "Other Income":["refund", "rebate", "cashback", "gift"]
+                }
     
     for x in transaction:
         description = x["description"].lower()
