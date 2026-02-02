@@ -2,19 +2,19 @@ def calculate(transactions):
     total_transactions = {  
         "revenue":{
             "Wages":0,
-            "Other Income":0,
-            "Total Income":0
+            "Other Income":0
         },
 
         "expenses":{
             "Rent":0,
             "Food":0,
             "Entertainment":0,
-            "Utilities":0,
-            "Total Expenses":0
+            "Utilities":0
         },
 
         "totals":{
+            "Total Income":0,
+            "Total Expenses":0,
             "Earnings Before Tax":0,
             "Net Income":0
         }
@@ -28,11 +28,11 @@ def calculate(transactions):
         #Adds amount to appropriate category and totals
         if category in total_transactions["revenue"]:
             total_transactions["revenue"][category] += amount
-            total_transactions["revenue"]["Total Income"] += amount
+            total_transactions["totals"]["Total Income"] += amount
 
         if category in total_transactions["expenses"]:
             total_transactions["expenses"][category] += amount
-            total_transactions["expenses"]["Total Expenses"] += amount
+            total_transactions["totals"]["Total Expenses"] += amount
 
     
     #Calculate net total
